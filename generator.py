@@ -1,13 +1,18 @@
 import string
 import random
+import logging
 
+logging.info("Generator Started")
+
+logging.info("Setting Initial Lists")
 alphabets = list(string.ascii_letters)
 digits = list(string.digits)
 special_char = list("!@#%&")
 characters  = list(string.ascii_letters + string.digits + "!@#%&")
 
-def generate_random_password():
 
+def generate_random_password():
+    
     length = int(input("Enter Password Length: "))
 
     alphabets_count = int(input("Enter Letter Count in Password: "))
@@ -40,5 +45,6 @@ def generate_random_password():
 
     print("Secure Password: ")
     print("".join(password))
+
 
 generate_random_password()
