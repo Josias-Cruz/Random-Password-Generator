@@ -1,3 +1,4 @@
+import base64
 import string
 import random
 import logging
@@ -43,8 +44,12 @@ def generate_random_password():
 
     random.shuffle(password)
 
-    print("Secure Password: ")
-    print("".join(password))
+    uncoded_password="".join(password)
+    uncoded_password_bytes = uncoded_password.encode('ascii')
+    encoded_password_bytes = base64.b64encode(uncoded_password_bytes)
+    encoded_password_string = encoded_password_bytes.decode('ascii')
+
+    print(f"Secure Password: {encoded_password_string}")
 
 
 generate_random_password()
