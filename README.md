@@ -9,6 +9,7 @@ This is a random password generator created to create secure passwords. This was
 ### Python 3
 Download the project and in your command line run 
 ```
+pip install -r requirements.txt
 py -m generator
 
 ```
@@ -16,6 +17,7 @@ py -m generator
 ### Python 2
 Download the project and in your command line run 
 ```
+pip install -r requirements.txt
 python -m generator
 
 ```
